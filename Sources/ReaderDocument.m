@@ -219,7 +219,9 @@
 			}
 			else // Cupertino, we have a problem with the document
 			{
-				NSAssert(NO, @"CGPDFDocumentRef == NULL");
+                NSLog(@"pdfReader::CGPDFDocumentRef == NULL");
+                return nil;
+				//NSAssert(NO, @"CGPDFDocumentRef == NULL");
 			}
 
 			_lastOpen = [NSDate dateWithTimeIntervalSinceReferenceDate:0.0];

@@ -480,18 +480,20 @@
 			else // Error out with a diagnostic
 			{
 				CGPDFDocumentRelease(_PDFDocRef), _PDFDocRef = NULL;
-
-				NSAssert(NO, @"CGPDFPageRef == NULL");
+                NSLog(@"pdfReader: CGPDFPageRef == NULL");
+				//NSAssert(NO, @"CGPDFPageRef == NULL");
 			}
 		}
 		else // Error out with a diagnostic
 		{
-			NSAssert(NO, @"CGPDFDocumentRef == NULL");
+            NSLog(@"pdfReader: CGPDFDocumentRef == NULL");
+			//NSAssert(NO, @"CGPDFDocumentRef == NULL");
 		}
 	}
 	else // Error out with a diagnostic
 	{
-		NSAssert(NO, @"fileURL == nil");
+        NSLog(@"pdfReader: fileURL == nil");
+		//NSAssert(NO, @"fileURL == nil");
 	}
 
 	ReaderContentPage *view = [self initWithFrame:viewRect];
